@@ -10,6 +10,10 @@ namespace NoSqlMySql
         {
             ConnectionString = $"datasource={datasource};port={port};username={username};password={password}";
         }
+        public NoSqlClient(string connectionString)
+        {
+            ConnectionString = connectionString;
+        }
         public bool CreateDatabase(string database)
         {
             bool success = false;
